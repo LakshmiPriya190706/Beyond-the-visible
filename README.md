@@ -22,8 +22,5 @@ Implemented as a form (Flask optional)
 Scored and normalized for model integration
 
 Confidence Score Calculation
-python
-Copy
-Edit
 Final Score = (0.9 × CNN_Predicted_Score) + (0.1 × Questionnaire_Score)
 
