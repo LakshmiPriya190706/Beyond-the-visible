@@ -26,7 +26,4 @@ python
 Copy
 Edit
 Final Score = (0.9 × CNN_Predicted_Score) + (0.1 × Questionnaire_Score)
-MRI-based score from CNN
-
-Symptom score from user questionnaire (scaled 0–100)
 
