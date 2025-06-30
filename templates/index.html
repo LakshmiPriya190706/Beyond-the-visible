@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VS Tumor Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>🧠BEYOND THE VISIBLE </h1>
+    <h2>Upload MRI & Answer Symptoms</h2>
+
+    <form action="/result" method="post" enctype="multipart/form-data">
+        <div class="upload-box">
+            <strong>Upload DICOM MRI File:</strong><br>
+            <input type="file" name="dcm_file" accept=".dcm" required>
+        </div>
+
+        <h3>Symptom Questionnaire</h3>
+        {% for question in questions %}
+            <label>{{ question }}</label>
+            <select name="q{{ loop.index }}">
+                <option value="1">Less</option>
+                <option value="2">Moderate</option>
+                <option value="3">High</option>
+                <option value="4">Extremely High</option>
+            </select>
+        {% endfor %}
+
+        <input type="submit" value="Submit for Analysis">
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+<div class="container">
+    <h1>📊 Analysis Result</h1>
+    <div class="result-box">
+        <p><strong>MRI Score (90%):</strong> {{ mri_score }}</p>
+        <p><strong>Questionnaire Score (10%):</strong> {{ q_score }}</p>
+        <p><strong>Final Score (out of 100):</strong> {{ final_score }}</p>
+        <p><strong>Tumor Stage:</strong> {{ stage }}</p>
+    </div>
+    <a href="/">← Back to Home</a>
+</div>
+<!-- Suggestions Section -->
+<div class="suggestion-box">
+    <h3>🧠 AI-Generated Suggestions</h3>
+    <ul>
+        {% for suggestion in suggestions %}
+            <li>{{ suggestion }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+
+</body>
+</html>
